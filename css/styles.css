@@ -1,4 +1,4 @@
-/* Global Styles */
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -55,17 +55,17 @@ canvas {
   gap: 2rem;
 }
 canvas {
-  max-width: 100%; /* Ensure it scales with the container */
-  height: 300px; /* Default height */
+  max-width: 100%; 
+  height: 300px; 
 }
 
 #bar-chart {
-  width: 40% !important; /* Control specific width */
+  width: 40% !important; 
   height: 25rem !important;
 }
 
 #line-chart {
-  width: 40% !important; /* Control specific width */
+  width: 40% !important; 
   height: 25rem !important;
 }
 #filters {
@@ -118,7 +118,7 @@ canvas {
   }
 }
 
-/* For tablets and smaller laptops */
+
 @media (min-width: 768px) and (max-width: 1023px) {
   #filters {
     width: 100%;
@@ -131,7 +131,7 @@ canvas {
   }
 }
 
-/* For smaller screens (mobile) */
+
 @media (max-width: 767px) {
   body{
     overflow-y: hidden;
@@ -152,16 +152,16 @@ canvas {
   }
 
   #bar-chart {
-    width: 90% !important; /* Control specific width */
+    width: 90% !important;
     height: 25rem !important;
   }
 
   #line-chart {
-    width: 90% !important; /* Control specific width */
+    width: 90% !important;
     height: 25rem !important;
   }
   canvas {
-    max-width: 90%; /* Ensure it scales with the container */
-    height: 300px; /* Default height */
+    max-width: 90%;
+    height: 300px; 
   }
 }
