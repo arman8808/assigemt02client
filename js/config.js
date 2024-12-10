@@ -1,0 +1,1 @@
+export const domin="https://assigmet02server.vercel.app/"

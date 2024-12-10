@@ -1,0 +1,167 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header,
+main,
+footer {
+  padding: 1em;
+}
+#filter {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+#resetFilters{
+  color: white;
+  background-color: red;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+
+  border-radius: 20px;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+
+#filter label {
+  margin-right: 5px;
+}
+
+canvas {
+  max-width: 800px;
+  margin: 20px auto;
+  display: block;
+}
+#home {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+.chart_area {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+canvas {
+  max-width: 100%; /* Ensure it scales with the container */
+  height: 300px; /* Default height */
+}
+
+#bar-chart {
+  width: 40% !important; /* Control specific width */
+  height: 25rem !important;
+}
+
+#line-chart {
+  width: 40% !important; /* Control specific width */
+  height: 25rem !important;
+}
+#filters {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2% 4%;
+  gap: 1rem;
+}
+#share-button {
+  cursor: pointer;
+
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(45deg, #b388eb, #8093f1);
+  border-radius: 20px;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+#apply-filters {
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(45deg, #050c5a, #8093f1);
+  border-radius: 20px;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+/* #filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+} */
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  #filters {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 4%;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* For tablets and smaller laptops */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #filters {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 4%;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* For smaller screens (mobile) */
+@media (max-width: 767px) {
+  body{
+    overflow-y: hidden;
+  }
+  #filters {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2% 2%;
+    gap: 0.5rem;
+    flex: 0.45;
+  }
+  .chart_area {
+    flex-direction: column;
+    padding: 0 1%;
+    width: 100%;
+  }
+
+  #bar-chart {
+    width: 90% !important; /* Control specific width */
+    height: 25rem !important;
+  }
+
+  #line-chart {
+    width: 90% !important; /* Control specific width */
+    height: 25rem !important;
+  }
+  canvas {
+    max-width: 90%; /* Ensure it scales with the container */
+    height: 300px; /* Default height */
+  }
+}

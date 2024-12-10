@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Chart.js Modular Example" />
+    <title>Assigment</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/components/charts.css" />
+    <script>
+      function getCookie(name) {
+        const cookies = document.cookie.split("; ");
+        for (let cookie of cookies) {
+          const [key, value] = cookie.split("=");
+          if (key === name) return value;
+        }
+        return null;
+      }
+      const token = getCookie("token");
+      if (!token) {
+        window.location.href = "/login.html";
+      }
+    </script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <p>Dashboard</p>
+
+      <a href="login.html">Logout</a>
+    </nav>
+    <main>
+      <section id="home">
+        <h1>Welcome to the Dashboard</h1>
+      </section>
+      <section id="filters">
+        <label for="age">Age Group:</label>
+        <select id="age">
+          <option value="all">All</option>
+          <option value="15-25">15-25</option>
+          <option value=">25">>25</option>
+        </select>
+
+        <label for="gender">Gender:</label>
+        <select id="gender">
+          <option value="all">All</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date" />
+
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date" />
+
+        <button id="apply-filters">Apply Filter</button>
+        <button id="resetFilters">Reset Filter</button>
+        <button id="share-button">Share</button>
+      </section>
+      <section id="charts">
+        <div class="chart_area">
+          <canvas id="bar-chart"></canvas>
+          <canvas id="line-chart"></canvas>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>
