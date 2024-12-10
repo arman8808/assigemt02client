@@ -21,6 +21,8 @@
       }
       const token = getCookie("token");
       if (!token) {
+        const filters = getFiltersFromURL();
+        localStorage.setItem("tempFilters", JSON.stringify(filters));
         window.location.href = "/login.html";
       }
     </script>
